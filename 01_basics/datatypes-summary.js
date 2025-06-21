@@ -33,3 +33,31 @@ const myFunction = function(){
 }
 
 console.log(typeof scoreValue)
+
+
+
+
+
+// *********************************************************************************************************
+
+// Stack(Primitivr), Heap (Non-Primitivr)
+
+let myName = "Shaurya"
+
+let anotherName = myName
+anotherName = "Lav"
+
+console.log(myName);
+console.log(anotherName);
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "shaurya@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
