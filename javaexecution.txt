@@ -1,0 +1,55 @@
+                                  Javascript Execution Context
+
+{code} -> Global Execution Context(EC) put into (this)
+
+1- Global Execution Context
+2- Function Execution Context
+3- Eval Execution Context ---- (mongoose)
+
+{code}  ---> Memory Creation Phase (done only memory allocation)
+        ---> Execution Phase (execute the code)
+
+let val1 = 10
+let val2 = 5
+function addNum(num1, num2){
+    let total = num1 + num2
+    return total 
+}
+let result1 = addNum(val1, val2)
+let result2 = addNum(10, 2)
+
+
+
+1 ---> Global Execution --- this
+2 ---> Memory Phase 
+     - val1 --> undefined
+     - val2 --> undefined
+     - addNum --> defination
+     - result1 --> undefined
+     - result2 --> undefined
+3 ---> Execution Phase
+     - val1 <--- 10
+     - val2 <--- 5
+     - addNum ----> [new variable enviornment + Execution thread] -->  know as New execution context 
+                --- after outcoming the result this sand box will delete automatically ---
+
+[new variable enviornment + Execution thread]  ----> Memory Phase
+                                                     - val1 --> undefined
+                                                     - val2 --> undefined
+                                                     - total --> undefined
+                                               ----> Execution Context
+                                                     - num1 --> 10
+                                                     - num2 --> 5
+                                                     - total --> 15 (and this total is return to Global Execution)
+
+
+for result2 :-
+
+NVE + Thread ---------> Memory Phase 
+                        -- Same as first one
+             ---------> Execytion Phase
+                        -- Same as first one
+
+
+
+Global Execution  ------->>>>  Follow LIFO approach 
