@@ -1,0 +1,16 @@
+------------------------------------ JAVASCRIPT ----------------------------------------
+
+--> Javascript
+           {|---> Synchronous ---- code is execute in sequence (one by one).
+            |---> Single Threaded ---- execute in single thread. } ------->>>> DEFAULT
+
+--> Execution Context 
+            |---> execute one line of code at a time.
+
+
+Blocking Code VS Non Blocking Code :--
+
+Blocking Code___________________________________Non Blocking Code               
+-> Block the flow of Program. | -> Does not block execution.
+-> Read file Sync.            | -> Read file Async.
+
