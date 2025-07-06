@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaurya-Tech</title>
+</head>
+<body>
+    <h1>Shauryaa-Tech</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+        let intervalId = null;
+
+        const sayDate = function(){
+            console.log("Shaurya", Date.now());
+        }
+
+         // const intervalId = setInterval(sayDate, 1000 , "hi")
+
+        document.querySelector('#start').addEventListener('click', function(){
+            if (intervalId === null) {
+                intervalId = setInterval(sayDate, 1000);
+                console.log("Started");
+            }
+        });
+
+        document.querySelector('#stop').addEventListener('click', function(){
+            if (intervalId !== null) {
+                clearInterval(intervalId);
+                intervalId = null;
+                console.log("Stopped");
+            }
+        });
+    </script>
+</body>
+</html>
