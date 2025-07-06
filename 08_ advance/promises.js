@@ -108,3 +108,13 @@ fetch('https://jsonplaceholder.typicode.com/users')
     console.log(data);
 })
 .catch((error) => console.log(error))
+
+
+/* 
+    response = fetch('something')
+     |                        |
+   DATA:-               Webbrowser/Node    
+   |-> onfullfilled[]     |-> Network request  
+   |-> onRejection[]              |-> YES
+                                  |-> NO
+*/
