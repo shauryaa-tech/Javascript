@@ -25,6 +25,44 @@ Array.prototype.heyShaurya = function(){
 }
 
 // heroPower.shaurya()
-myHero.shaurya()
-myHero.heyShaurya()
-heroPower.heyShaurya()
+// myHero.shaurya()
+// myHero.heyShaurya()
+// heroPower.heyShaurya()
+
+// inheritance
+
+const User = {
+    name: "shaurya",
+    email: "shaurya@gmail.com"
+}
+
+const Teacher = {
+    makeVideo: true
+}
+
+const TeachingSupport = {
+    isAvailable: false
+}
+
+const TASupport = {
+    makeAssignment: 'JS assignment',
+    fullTime: true,
+    __proto__: TeachingSupport
+}
+
+Teacher.__proto__ = User
+
+// modern syntax
+Object.setPrototypeOf(TeachingSupport, Teacher)
+
+let anotherUsername = "ShauryawithCode       "
+
+String.prototype.trueLength =  function(){
+    console.log(`${this}`);
+    // console.log(`${this.name}`);
+    console.log(`True length is : ${this.trim().length}`);
+}
+
+anotherUsername.trueLength()
+"shaurya".trueLength()
+"iceTea".trueLength()
